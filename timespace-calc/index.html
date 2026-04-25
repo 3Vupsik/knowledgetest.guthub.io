@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>TimeSpace Calc — Пространство + Время</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components/display.css">
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/components/modes.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Шапка -->
+        <header class="app-header">
+            <h1>🌌 TimeSpace Calc</h1>
+            <p class="tagline">Складывай метры с минутами</p>
+            <div class="mode-indicator" id="modeIndicator">
+                <span class="mode-badge" data-mode="normal">🔢 Обычный</span>
+            </div>
+        </header>
+
+        <!-- Главный дисплей -->
+        <div class="display-section">
+            <div class="display-history" id="historyDisplay"></div>
+            <div class="display-main" id="mainDisplay">0</div>
+            <div class="display-unit" id="unitDisplay"></div>
+        </div>
+
+        <!-- Переключатели режимов -->
+        <div class="mode-switch">
+            <button class="mode-btn active" data-mode="normal">🔢</button>
+            <button class="mode-btn" data-mode="distance">📏</button>
+            <button class="mode-btn" data-mode="time">⏱</button>
+            <button class="mode-btn" data-mode="hybrid">⚡</button>
+        </div>
+
+        <!-- Доп. индикаторы для гибридного режима -->
+        <div class="hybrid-panel" id="hybridPanel" style="display: none;">
+            <div class="hybrid-row">
+                <span class="hybrid-label">📏 Расстояние:</span>
+                <span class="hybrid-value" id="hybridDistance">0 м</span>
+            </div>
+            <div class="hybrid-row">
+                <span class="hybrid-label">⏱ Время:</span>
+                <span class="hybrid-value" id="hybridTime">0 сек</span>
+            </div>
+            <div class="hybrid-row result">
+                <span class="hybrid-label">⚡ Скорость/Темп:</span>
+                <span class="hybrid-value" id="hybridResult">—</span>
+            </div>
+        </div>
+
+        <!-- Кнопки калькулятора -->
+        <div class="buttons-grid" id="buttonsGrid">
+            <!-- Будут сгенерированы JS -->
+        </div>
+
+        <!-- Нижняя панель действий -->
+        <div class="action-bar">
+            <button class="action-btn" id="clearBtn">C</button>
+            <button class="action-btn" id="convertBtn">🔄 Конверт</button>
+            <button class="action-btn" id="speedLinkBtn">🔗 Связать</button>
+            <button class="action-btn" id="equalsBtn">=</button>
+        </div>
+    </div>
+
+    <script src="js/utils/helpers.js"></script>
+    <script src="js/modules/converter.js"></script>
+    <script src="js/modules/parser.js"></script>
+    <script src="js/modules/calculator.js"></script>
+    <script src="js/modules/hybrid.js"></script>
+    <script src="js/modules/ui.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

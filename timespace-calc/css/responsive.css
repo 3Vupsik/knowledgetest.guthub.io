@@ -1,0 +1,36 @@
+@media (max-width: 480px) {
+    .app-container {
+        padding: 16px;
+        border-radius: 32px;
+    }
+
+    .display-main {
+        font-size: 2.2rem;
+    }
+
+    .btn {
+        padding: 16px 0;
+        font-size: 1.2rem;
+    }
+
+    .buttons-grid {
+        gap: 8px;
+    }
+
+    .mode-btn {
+        font-size: 1rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 380px) {
+    .btn {
+        padding: 12px 0;
+        font-size: 1rem;
+    }
+
+    .action-btn {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+}
